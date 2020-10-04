@@ -10,8 +10,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
-
-
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {LayoutModule} from '@angular/cdk/layout';
+import { PricingComponent } from './components/pricing/pricing.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { SocialsComponent } from './components/socials/socials.component';
 
 
 @NgModule({
@@ -19,6 +26,10 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     LoginButtonComponent,
     HomeComponent,
+    NavBarComponent,
+    PricingComponent,
+    LogoComponent,
+    SocialsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +38,12 @@ import { HomeComponent } from './components/home/home.component';
     MatMenuModule,
     MatIconModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatDividerModule,
+    LayoutModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}],
   bootstrap: [AppComponent]
