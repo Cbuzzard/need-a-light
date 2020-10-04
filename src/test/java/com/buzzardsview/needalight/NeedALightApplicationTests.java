@@ -1,10 +1,10 @@
-package com.buzzardsview.angularspringgapi;
+package com.buzzardsview.needalight;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AngularSpringGapiApplicationTests {
+class NeedALightApplicationTests {
 
 	@Test
 	void contextLoads() {
