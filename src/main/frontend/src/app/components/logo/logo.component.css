@@ -1,0 +1,67 @@
+.logocontainer {
+    width: fit-content;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: -10px;
+    max-width: 100%;
+}
+
+.left, .right {
+    width: 11vw;
+    height: auto;
+}
+
+.left {
+    left: 4vw;
+}
+
+.right {
+    right: 3vw;
+}
+
+.logo {
+    max-height: 120px;
+    margin: 20px auto 10px auto;
+    display: inline;
+    max-width: 100%;
+    position: relative;
+    letter-spacing: -2px;
+}
+
+.logotext {
+    top: -8vw;
+    font-family: logoFont;
+    font-size: 10vw;
+}
+
+.desc {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    font-size: 3.5vw;
+    top: -30px;
+    margin: 0;
+}
+
+@media only screen and (min-width: 720px) {
+    .logotext {
+        font-size: 75px;
+
+        top: -50px;
+    }
+
+    .left {
+        left: 30px;
+        width: auto;
+    }
+
+    .right {
+        width: auto;
+        right: 22px;
+    }
+
+    .desc {
+        font-size: 23px;
+        top: -30px;
+    }
+}
