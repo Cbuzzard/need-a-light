@@ -1,0 +1,16 @@
+.lightimg {
+    margin: 40px auto 0 auto;
+    width: 80%;
+}
+
+.priceheader {
+    background-image: url(../../../assets/christmaslights1.jpg);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
