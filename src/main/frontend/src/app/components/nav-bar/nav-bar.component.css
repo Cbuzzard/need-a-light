@@ -1,0 +1,76 @@
+
+.white {
+    background-color: white;
+}
+
+.headercontainer {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    clip-path: ellipse(210px 210px at 49.5% 50%);
+    transition: clip-path .5s ease-in-out;
+    width: 100%;
+    z-index: 4;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.onscroll + .content {
+    padding-top: 50px;
+}
+
+.exposedbtnscontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.exposedbtns {
+    flex: 20%
+}
+
+.navbtncontainer {
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbtn {
+    margin: 10px 0 0 10px;
+    align-self: flex-start;
+}
+
+.spacer {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.navlinks {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 520px) {
+    .exposedbtns {
+        display: none;
+    }
+    .headercontainer {
+        clip-path: ellipse(20px 20px at 30px 29px);
+    }
+
+  
+}
+
+.onscroll {
+    position: fixed;
+    top: 0;
+    clip-path: ellipse(20px 20px at 30px 29px);
+}
+
+.example-sidenav {
+    z-index: 3;
+}

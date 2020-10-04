@@ -1,0 +1,43 @@
+
+
+<mat-sidenav-container class="white">
+    <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" fixedTopGap="mobileQuery.matches ? 0 : 64" class="example-sidenav"
+                 [fixedInViewport]="true">
+                <mat-nav-list class="navlinks">
+                    <a mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></a>
+                    <a mat-list-item routerLink=".">Pricing</a>
+                    <a mat-list-item routerLink=".">Contact Us</a>
+                    <a mat-list-item routerLink=".">Gallery</a>
+                    <a mat-list-item routerLink=".">About Us</a>
+                    <a mat-list-item routerLink=".">Blog</a>
+                </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <app-socials></app-socials>
+        
+        <app-logo (loaded)="setSticky()"></app-logo>
+        
+        <mat-divider></mat-divider>
+        
+        <div #headercontainer class="headercontainer">
+            <button class="navbtn" mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+            <div class="exposedbtnscontainer">
+                <button class="exposedbtns" mat-button>Pricing</button>
+                <button class="exposedbtns" mat-button>Contact</button>
+                <button class="exposedbtns" mat-button>Gallery</button>
+                <button class="exposedbtns" mat-button>About Us</button>
+                <button class="exposedbtns" mat-button>Blog</button>
+            </div>
+            <div class="spacer"></div>
+        </div>
+
+        <div class="content">
+            <router-outlet ></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
