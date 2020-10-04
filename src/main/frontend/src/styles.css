@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    font-family: logoFont;
+    src: url(./assets/logo-font1.otf);
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -8,4 +13,8 @@ p {
     display: inline-block;
     white-space: pre;
     margin: 0 !important;
+}
+
+.clickable {
+    cursor: pointer;
 }
