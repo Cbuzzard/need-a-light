@@ -1,4 +1,4 @@
-package com.buzzardsview.angularspringgapi.controller;
+package com.buzzardsview.needalight.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
-import static com.buzzardsview.angularspringgapi.security.AppTokenProvider.getUserFromToken;
+import static com.buzzardsview.needalight.security.AppTokenProvider.getUserFromToken;
 
 @RestController
 @RequestMapping("rest/authenticate")

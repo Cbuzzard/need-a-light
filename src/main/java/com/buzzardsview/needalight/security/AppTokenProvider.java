@@ -1,4 +1,4 @@
-package com.buzzardsview.angularspringgapi.security;
+package com.buzzardsview.needalight.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

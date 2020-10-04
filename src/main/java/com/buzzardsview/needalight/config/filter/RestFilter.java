@@ -1,4 +1,4 @@
-package com.buzzardsview.angularspringgapi.config.filter;
+package com.buzzardsview.needalight.config.filter;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
-import static com.buzzardsview.angularspringgapi.security.AppTokenProvider.addAuthentication;
-import static com.buzzardsview.angularspringgapi.security.AppTokenProvider.getUserFromToken;
+import static com.buzzardsview.needalight.security.AppTokenProvider.addAuthentication;
+import static com.buzzardsview.needalight.security.AppTokenProvider.getUserFromToken;
 
 
 @Component

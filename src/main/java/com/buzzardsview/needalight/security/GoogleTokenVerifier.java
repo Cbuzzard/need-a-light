@@ -1,6 +1,6 @@
-package com.buzzardsview.angularspringgapi.security;
+package com.buzzardsview.needalight.security;
 
-import com.buzzardsview.angularspringgapi.security.exception.InvalidTokenException;
+import com.buzzardsview.needalight.security.exception.InvalidTokenException;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;

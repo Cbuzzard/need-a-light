@@ -1,7 +1,7 @@
-package com.buzzardsview.angularspringgapi.controller;
+package com.buzzardsview.needalight.controller;
 
-import com.buzzardsview.angularspringgapi.data.UserRepository;
-import com.buzzardsview.angularspringgapi.model.User;
+import com.buzzardsview.needalight.data.UserRepository;
+import com.buzzardsview.needalight.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

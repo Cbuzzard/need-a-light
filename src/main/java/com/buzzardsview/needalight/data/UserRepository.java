@@ -1,6 +1,6 @@
-package com.buzzardsview.angularspringgapi.data;
+package com.buzzardsview.needalight.data;
 
-import com.buzzardsview.angularspringgapi.model.User;
+import com.buzzardsview.needalight.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

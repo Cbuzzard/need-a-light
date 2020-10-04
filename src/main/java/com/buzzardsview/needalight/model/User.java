@@ -1,4 +1,4 @@
-package com.buzzardsview.angularspringgapi.model;
+package com.buzzardsview.needalight.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

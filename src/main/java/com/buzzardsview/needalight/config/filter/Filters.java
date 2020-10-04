@@ -1,4 +1,4 @@
-package com.buzzardsview.angularspringgapi.config.filter;
+package com.buzzardsview.needalight.config.filter;
 
 import java.util.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
