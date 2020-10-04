@@ -1,0 +1,15 @@
+.iconcontainer {
+    position: absolute;
+}
+
+.icon {
+    height: 25px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon {
+        display: block;
+        height: 18px;
+   }
+}
