@@ -19,6 +19,7 @@ import {LayoutModule} from '@angular/cdk/layout';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SocialsComponent } from './components/socials/socials.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SocialsComponent } from './components/socials/socials.component';
     PricingComponent,
     LogoComponent,
     SocialsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
