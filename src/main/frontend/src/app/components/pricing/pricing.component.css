@@ -1,16 +1,91 @@
-.lightimg {
-    margin: 40px auto 0 auto;
-    width: 80%;
-}
+
 
 .priceheader {
-    background-image: url(../../../assets/christmaslights1.jpg);
+    background-image: url(../../../assets/christmaslights2.jpg);
     text-align: center;
-    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: block;
+    margin: 20px auto 0 auto;
+    max-height: 30vh;
+}
+
+/* .priceheader > .textcontainer::before {
+    filter: blur(12px);
+    z-index: 1;
+} */
+
+.textcontainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* filter: blur(12px); */
 }
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
     color: white;
+    font-size: 7vw;
+    text-shadow: 0 0 13px #000000, 0 0 13px #000000, 0 0 13px #000000;
+}
+
+.pricecontainer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.packagecontainer {
+    margin-top: 20px;
+    flex: 33%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.bulb {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 720px) {
+    h2 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .packagecontainer {
+        flex: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .packagecontainer {
+        flex: 80%;
+    }
 }
