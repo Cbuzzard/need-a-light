@@ -20,7 +20,9 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,11 @@ import { ContactComponent } from './components/contact/contact.component';
     MatToolbarModule,
     MatListModule,
     MatDividerModule,
-    LayoutModule
+    LayoutModule,
+    MatInputModule,
+    MatFormFieldModule,
+    RecaptchaModule
+
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}],
   bootstrap: [AppComponent]
