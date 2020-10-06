@@ -23,6 +23,7 @@
     "@angular/router": "~10.0.6",
     "@types/gapi": "0.0.39",
     "@types/gapi.auth2": "0.0.52",
+    "ng-recaptcha": "^6.0.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
