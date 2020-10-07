@@ -1,0 +1,17 @@
+.aboutcontainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headercontainer {
+    display: block;
+    margin: 80px auto 40px auto;
+}
+
+.content {
+    width: 1000px;
+    max-width: 90%;
+    margin: 20px auto 0 auto;
+    text-indent: 10%;
+}
