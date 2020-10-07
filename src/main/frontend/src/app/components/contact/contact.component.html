@@ -15,19 +15,21 @@
         </div>
 
     </div>
-    <form class="form">
+    <form [formGroup]="contactForm" class="form" #formDirective="ngForm" (ngSubmit)="onSubmit(contactForm.value, formDirective)">
 
         <mat-form-field class="full-width">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="example@example.com">
+          <input matInput placeholder="example@example.com" formControlName="email">
+          <mat-error *ngIf="contactForm.get('email').invalid">{{getErrorMessage('email')}}</mat-error>
         </mat-form-field>
       
         <mat-form-field class="full-width">
           <mat-label>Body</mat-label>
-          <textarea matInput placeholder="Let us know what we can help you with."></textarea>
+          <textarea matInput placeholder="Let us know what we can help you with." formControlName="body"></textarea>
+          <mat-error *ngIf="contactForm.get('body').invalid">{{getErrorMessage('body')}}</mat-error>
         </mat-form-field>
 
-        <button class="submitbtn" mat-button>Send</button>
+        <button type="submit" class="submitbtn" mat-button>Send</button>
       </form>
 
 </div>
