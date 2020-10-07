@@ -5,11 +5,11 @@
                  [fixedInViewport]="true">
                 <mat-nav-list class="navlinks">
                     <a class="font" mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></a>
-                    <a class="font" mat-list-item routerLink=".">Pricing</a>
-                    <a class="font" mat-list-item routerLink=".">Contact Us</a>
-                    <a class="font" mat-list-item routerLink=".">Gallery</a>
-                    <a class="font" mat-list-item routerLink=".">About Us</a>
-                    <a class="font" mat-list-item routerLink=".">Blog</a>
+                    <a class="font" mat-list-item (click)="navigate('pricing')">Pricing</a>
+                    <a class="font" mat-list-item (click)="navigate('contact')">Contact Us</a>
+                    <a class="font" mat-list-item (click)="navigate('gallery')">Gallery</a>
+                    <a class="font" mat-list-item (click)="navigate('about')">About Us</a>
+                    <a class="font" mat-list-item (click)="navigate('pricing')">Blog</a>
                 </mat-nav-list>
     </mat-sidenav>
 
