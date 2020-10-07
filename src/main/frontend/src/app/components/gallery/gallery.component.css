@@ -1,0 +1,40 @@
+.gallerycontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.headercontainer {
+    display: block;
+    margin: 80px auto 40px auto;
+}
+
+.imgcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img {
+    display: inline-block;
+    flex: 30%;
+    margin: 8px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .img {
+        flex: 80%;
+    }
+    img {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    img {
+        width: 95%;
+    }
+}
