@@ -13,5 +13,9 @@ export class RestService {
     })
   }
 
-  constructor(private url: UrlService, private http: HttpClient) { }
+  constructor(private url: UrlService, private http: HttpClient) {}
+
+  sendEmail(emailDto) {
+    return this.http.post(`${this.url.backend}/email`, emailDto, this.httpOptions)
+  }
 }
