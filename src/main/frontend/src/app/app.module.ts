@@ -22,7 +22,12 @@ import { SocialsComponent } from './components/socials/socials.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { RecaptchaModule } from 'ng-recaptcha';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +39,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
     LogoComponent,
     SocialsComponent,
     ContactComponent,
+    GalleryComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,10 +57,16 @@ import { RecaptchaModule } from 'ng-recaptcha';
     LayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    RecaptchaModule
+    RecaptchaV3Module,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
 
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcFJdQZAAAAACr-6R34kCTXuYysHG7WUYLOEi8P' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
