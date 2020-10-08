@@ -20,31 +20,8 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('about')
   about;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor() { }
 
-  ngAfterViewInit(): void {
-    console.log("other")
-    this.route.queryParams.subscribe(params => {
-      this.scroll(params.scroll);
-    });
-  }
-
-  scroll(location) {
-    switch(location) {
-      case 'pricing':
-        this.pricing.nativeElement.scrollIntoView({behavior: "smooth"});
-        break;
-      case 'contact':
-        this.contact.nativeElement.scrollIntoView({behavior: "smooth"});
-        break;
-      case 'gallery':
-        this.gallery.nativeElement.scrollIntoView({behavior: "smooth"});
-        break;
-      case 'about':
-        this.about.nativeElement.scrollIntoView({behavior: "smooth"});
-        break;
-      default:
-    }
-  }
+  ngAfterViewInit(): void { }
 
 }
