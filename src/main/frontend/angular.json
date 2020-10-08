@@ -27,7 +27,7 @@
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/marked/lib/marked.js"]
           },
           "configurations": {
             "production": {

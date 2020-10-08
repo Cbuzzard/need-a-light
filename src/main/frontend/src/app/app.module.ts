@@ -27,6 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { AboutComponent } from './components/about/about.component';
+import { MarkdownModule } from 'ngx-markdown';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { AboutComponent } from './components/about/about.component';
     ContactComponent,
     GalleryComponent,
     AboutComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { AboutComponent } from './components/about/about.component';
     RecaptchaV3Module,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MarkdownModule.forRoot(),
 
   ],
   providers: [
