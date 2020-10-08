@@ -29,7 +29,7 @@
           <mat-error *ngIf="contactForm.get('body').invalid">{{getErrorMessage('body')}}</mat-error>
         </mat-form-field>
 
-        <button type="submit" class="submitbtn" mat-button>Send</button>
+        <button [disabled]="contactForm.invalid" type="submit" class="submitbtn" mat-button>Send</button>
       </form>
 
 </div>

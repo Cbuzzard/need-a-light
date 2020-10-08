@@ -7,6 +7,11 @@
     max-width: 100%;
 }
 
+.headercontainer {
+    text-align: center;
+    margin: 80px auto 40px auto;
+}
+
 .full-width {
     width: 100%;
 }
