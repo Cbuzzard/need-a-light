@@ -1,0 +1,5 @@
+.logincontainer {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
