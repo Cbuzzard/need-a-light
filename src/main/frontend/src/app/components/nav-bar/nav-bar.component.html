@@ -5,10 +5,11 @@
                  [fixedInViewport]="true">
                 <mat-nav-list class="navlinks">
                     <a class="font" mat-list-item (click)="sidenav.toggle()"><mat-icon>close</mat-icon></a>
+                    <a class="font" mat-list-item (click)="navigate('')">Home</a>
                     <a class="font" mat-list-item (click)="navigate('pricing')">Pricing</a>
                     <a class="font" mat-list-item (click)="navigate('contact')">Contact Us</a>
-                    <a class="font" mat-list-item (click)="navigate('gallery')">Gallery</a>
                     <a class="font" mat-list-item (click)="navigate('about')">About Us</a>
+                    <a class="font" mat-list-item (click)="navigate('gallery')">Gallery</a>
                     <a class="font" mat-list-item (click)="navigate('pricing')">Blog</a>
                 </mat-nav-list>
     </mat-sidenav>
@@ -24,11 +25,11 @@
         <div #headercontainer class="headercontainer">
             <button class="navbtn" mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
             <div class="exposedbtnscontainer">
-                <button class="exposedbtns font" mat-button>Pricing</button>
-                <button class="exposedbtns font" mat-button>Contact</button>
-                <button class="exposedbtns font" mat-button>Gallery</button>
-                <button class="exposedbtns font" mat-button>About Us</button>
-                <button class="exposedbtns font" mat-button>Blog</button>
+                <button class="exposedbtns font" (click)="navigate('pricing')" mat-button>Pricing</button>
+                <button class="exposedbtns font" (click)="navigate('contact')" mat-button>Contact</button>
+                <button class="exposedbtns font" (click)="navigate('about')" mat-button>About</button>
+                <button class="exposedbtns font" (click)="navigate('gallery')" mat-button>Gallery</button>
+                <button class="exposedbtns font" (click)="navigate('pricing')" mat-button>Blog</button>
             </div>
             <div class="spacer"></div>
         </div>

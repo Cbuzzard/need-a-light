@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
 
-  @HostListener('window:scroll', ['$event']) 
+  @HostListener('window:scroll', ['$event'])
   doSomething(event) {
     window.pageYOffset > this.sticky ? this.headerContainer.nativeElement.classList.add('onscroll') : this.headerContainer.nativeElement.classList.remove('onscroll')
   }
@@ -39,7 +39,7 @@ export class NavBarComponent implements OnInit {
   }
 
   navigate(location) {
-    this.router.navigateByUrl('').then(res => this.router.navigate([''], { queryParams: { scroll: location } }));
+    this.router.navigateByUrl('').then(res => this.router.navigateByUrl(`/#${location}`));
   }
 
 }
