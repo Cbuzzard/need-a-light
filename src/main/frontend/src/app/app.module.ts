@@ -29,6 +29,10 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { AboutComponent } from './components/about/about.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { AdminComponent } from './components/admin/admin.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 
 @NgModule({
@@ -64,6 +68,8 @@ import { AdminComponent } from './components/admin/admin.component';
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    MatProgressBarModule,
+    MatCardModule,
     MarkdownModule.forRoot(),
 
   ],

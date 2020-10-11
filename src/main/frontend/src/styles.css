@@ -6,10 +6,13 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Times New Roman', Times, serif; }
+body {
+    margin: 0; 
+    font-family: 'Times New Roman', Times, serif;
+}
 
 .font {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif !important;
 }
 
 p {
@@ -30,9 +33,14 @@ p {
     text-shadow: 0 0 13px #000000, 0 0 13px #000000, 0 0 13px #000000;
 }
 
+.full-width {
+    width: 100%;
+}
+
 @media only screen and (min-width: 720px) {
     .contentheader {
         font-size: 45px !important;
     }
 }
+
 
