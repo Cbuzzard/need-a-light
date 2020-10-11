@@ -1,9 +1,48 @@
 <div class="logincontainer">
     <app-login-button></app-login-button>
 </div>
-<markdown ngPreserveWhitespaces>
-    # h1
-    ## h2
-    ### h3
-    adfgakjl
-</markdown>
+
+<div class="newblogcontainer">
+    <mat-card class="card">  
+        <mat-card-content>
+    
+            <form [formGroup]="blogForm" class="form" (ngSubmit)="onSubmit(blogForm.value)">
+    
+                <mat-form-field class="full-width">
+                  <mat-label>URL Slug</mat-label>
+                  <input matInput placeholder="ex. this-is-what-the-url-is" formControlName="slug">
+                  <mat-error *ngIf="blogForm.get('slug').invalid">{{getErrorMessage('slug')}}</mat-error>
+                </mat-form-field>
+              
+                <mat-form-field class="full-width">
+                  <mat-label>Content</mat-label>
+                  <textarea matInput placeholder="" formControlName="content"></textarea>
+                  <mat-error *ngIf="blogForm.get('content').invalid">{{getErrorMessage('content')}}</mat-error>
+                </mat-form-field>
+    
+                <div *ngIf="file">
+                    <mat-progress-bar [value]="fileProgress"></mat-progress-bar>  
+                    <span id="file-label">{{file.name}}</span>
+                </div>
+    
+                <button mat-button (click)="onClick()">  
+                    <mat-icon>folder</mat-icon>  
+                    Select Image  
+                </button>  
+                <button [disabled]="blogForm.invalid" type="submit" class="submitbtn" mat-button>Send</button>
+            
+            </form>
+                      
+        </mat-card-content> 
+    </mat-card>
+    <input type="file" #fileUpload id="fileUpload" name="fileUpload" accept="image/*" style="display:none;" />
+
+    <markdown class="preview" [data]="blogForm.value.content" ngPreserveWhitespaces>
+    </markdown>
+
+</div>
+
+
+
+
+

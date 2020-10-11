@@ -18,4 +18,12 @@ export class RestService {
   sendEmail(emailDto) {
     return this.http.post(`${this.url.backend}/email`, emailDto, this.httpOptions)
   }
+
+  uploadImage(image) {
+    console.log(image)
+    return this.http.post(`${this.url.backend}/rest/upload`, image, {
+      reportProgress: true,
+      observe: 'events'
+    })
+  }
 }
