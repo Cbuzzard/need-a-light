@@ -3,11 +3,6 @@
     flex-direction: column;
 }
 
-.headercontainer {
-    display: block;
-    margin: 80px auto 40px auto;
-}
-
 .imgcontainer {
     display: flex;
     flex-wrap: wrap;

@@ -1,5 +1,4 @@
-import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,33 +12,21 @@ export class NavBarComponent implements OnInit {
   headerContainer;
   sticky
 
-  mobileQuery: MediaQueryList;
-  private _mobileQueryListener: () => void;
-
   @HostListener('window:scroll', ['$event'])
   doSomething(event) {
     window.pageYOffset > this.sticky ? this.headerContainer.nativeElement.classList.add('onscroll') : this.headerContainer.nativeElement.classList.remove('onscroll')
   }
 
-  showBurger() {
+  constructor(private router: Router) { }
 
-  }
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   setSticky() {
     this.sticky = this.headerContainer.nativeElement.offsetTop;
   }
 
   navigate(location) {
-    this.router.navigateByUrl('').then(res => this.router.navigateByUrl(`/#${location}`));
+    this.router.navigateByUrl('').then(res => this.router.navigateByUrl(location));
   }
 
 }

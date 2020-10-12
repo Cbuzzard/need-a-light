@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +6,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-
-  @ViewChild('pricing')
-  pricing;
-
-  @ViewChild('contact')
-  contact;
-
-  @ViewChild('gallery')
-  gallery;
-
-  @ViewChild('about')
-  about;
 
   constructor() { }
 

@@ -1,15 +1,16 @@
 
 .white {
     background-color: white;
+    min-height: 100vh;
 }
 
-.headercontainer {
-    background-color: rgba(255, 255, 255, 0.3);
+.headerbtncontainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     clip-path: ellipse(210px 210px at 49.5% 50%);
     transition: clip-path .5s ease-in-out;
+    backdrop-filter: blur(10px);
     width: 100%;
     z-index: 4;
 }
@@ -57,7 +58,7 @@
     .exposedbtns {
         display: none;
     }
-    .headercontainer {
+    .headerbtncontainer {
         clip-path: ellipse(20px 20px at 30px 29px);
     }
 

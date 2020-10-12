@@ -1,11 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-
 @font-face {
     font-family: logoFont;
     src: url(./assets/logo-font1.otf);
 }
 
 html, body { height: 100%; }
+
 body {
     margin: 0; 
     font-family: 'Times New Roman', Times, serif;
@@ -15,10 +14,6 @@ body {
     font-family: 'Times New Roman', Times, serif !important;
 }
 
-p {
-    /* margin: 0 !important; */
-}
-
 .clickable {
     cursor: pointer;
 }
@@ -26,6 +21,12 @@ p {
 .contentheader {
     font-family: 'Times New Roman', Times, serif !important;
     font-size: 7vw !important;
+}
+
+.headercontainer {
+    display: block;
+    margin: 5vh auto 40px auto;
+    width: fit-content;
 }
 
 .textshadow {

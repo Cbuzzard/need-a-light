@@ -42,8 +42,6 @@ export class ContactComponent implements OnInit {
     this._snackBar.open("Email sent! We will get back to you shortly.", '', {duration: 5000})
   }
 
-
-
   getErrorMessage(field) {
     switch(field) {
       case 'email':

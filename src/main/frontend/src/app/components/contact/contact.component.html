@@ -1,20 +1,21 @@
 <div class="contactcontainer">
+
     <div class="headercontainer">
-
-        <h2 class="contentheader">Contact Us</h2>
-        <mat-divider></mat-divider>
-        
-        <div class="contacticoncontainer">
-            <mat-icon>email</mat-icon>
-            <p>NeedALightllc@Gmail.com</p>
-        </div>
-
-        <div class="contacticoncontainer">
-            <mat-icon>phone</mat-icon>
-            <p>(813) 644-9644</p>
-        </div>
-
+      <h2 class="contentheader">Contact Us</h2>
+      <mat-divider></mat-divider>
     </div>
+
+
+    <div class="contacticoncontainer">
+      <mat-icon>email</mat-icon>
+      <p class="email">NeedALightllc@Gmail.com</p>
+    </div>
+
+    <div class="contacticoncontainer">
+      <mat-icon>phone</mat-icon>
+      <p>(813) 644-9644</p>
+    </div>
+
     <form [formGroup]="contactForm" class="form" #formDirective="ngForm" (ngSubmit)="onSubmit(contactForm.value, formDirective)">
 
         <mat-form-field class="full-width">
@@ -30,6 +31,7 @@
         </mat-form-field>
 
         <button [disabled]="contactForm.invalid" type="submit" class="submitbtn" mat-button>Send</button>
+        
       </form>
 
 </div>

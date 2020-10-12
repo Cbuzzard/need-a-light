@@ -11,17 +11,11 @@
     max-height: 30vh;
 }
 
-/* .priceheader > .textcontainer::before {
-    filter: blur(12px);
-    z-index: 1;
-} */
-
 .textcontainer {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
-    /* filter: blur(12px); */
 }
 
 .pricecontainer {

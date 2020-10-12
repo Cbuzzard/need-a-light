@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px auto 0 auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
     width: 800px;
     max-width: 100%;
 }
 
 .headercontainer {
-    text-align: center;
-    margin: 80px auto 40px auto;
+    margin-bottom: 0;
 }
 
 .form {
@@ -28,4 +28,11 @@
 .submitbtn {
     display: block;
     margin-left: auto;
+}
+
+.email {
+    line-height: 20px;
+    height: 20px;
+    margin-bottom: 0;
+    align-self: center;
 }
