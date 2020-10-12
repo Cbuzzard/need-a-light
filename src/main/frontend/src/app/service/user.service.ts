@@ -14,6 +14,7 @@ export class UserService {
 
   gapiSetup: boolean = false;
   loginStatus: Subject<boolean> = new Subject<boolean>();
+  adminStatus: Subject<boolean> = new Subject<boolean>();
   authInstance: gapi.auth2.GoogleAuth;
   userId;
 
@@ -24,11 +25,17 @@ export class UserService {
 
   refreshStatus() {
     this.authenticate().then(res => this.loginStatus.next(JSON.stringify(res) === 'true'))
+    this.authenticateAdmin().then(res => this.adminStatus.next(JSON.stringify(res) === 'true'))
   }
 
   async authenticate(): Promise<Object> {
     const httpOptions = { headers: new HttpHeaders({}) };
     return await this.http.get(`${this.url.backend}/rest/authenticate`, httpOptions).toPromise();
+  }
+
+  async authenticateAdmin(): Promise<Object> {
+    const httpOptions = { headers: new HttpHeaders({}) };
+    return await this.http.get(`${this.url.backend}/rest/authenticate/admin`, httpOptions).toPromise();
   }
 
   login() {
