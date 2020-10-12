@@ -12,6 +12,7 @@ public class User {
     private String googleId;
     private String name;
     private String picture;
+    private boolean isAdmin = false;
 
     public User(@Size(max = 22) String googleId, String name, String picture) {
         this.googleId = googleId;
@@ -44,5 +45,13 @@ public class User {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }
