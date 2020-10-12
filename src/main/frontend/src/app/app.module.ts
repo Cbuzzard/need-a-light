@@ -27,10 +27,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { AboutComponent } from './components/about/about.component';
-import { MarkdownModule } from 'ngx-markdown';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { AdminComponent } from './components/admin/admin.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { SecurityContext } from '@angular/core';
 
 
 
@@ -48,6 +51,8 @@ import {MatCardModule} from '@angular/material/card';
     GalleryComponent,
     AboutComponent,
     AdminComponent,
+    BlogComponent,
+    BlogListComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +75,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSnackBarModule,
     MatProgressBarModule,
     MatCardModule,
-    MarkdownModule.forRoot(),
+    MarkdownModule.forRoot({
+      sanitize: SecurityContext.NONE,
+    }),
 
   ],
   providers: [
