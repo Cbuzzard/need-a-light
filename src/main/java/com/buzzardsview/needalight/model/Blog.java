@@ -1,22 +1,29 @@
 package com.buzzardsview.needalight.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import java.sql.Blob;
+import com.buzzardsview.needalight.model.dto.BlogForListDto;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Blog {
 
     @Id
+    @GeneratedValue
+    private int id;
+    private String title;
     private String slug;
     @Lob
-    private Blob content;
+    @Size(max = 20000)
+    private String content;
     private String imageUrl;
+    @ManyToOne
+    @JoinColumn(name = "google_id")
     private User user;
     private long timestamp;
 
-    public Blog(String slug, Blob content, String imageUrl, User user) {
+    public Blog(String title, String slug, String content, String imageUrl, User user) {
+        this.title = title;
         this.slug = slug;
         this.content = content;
         this.imageUrl = imageUrl;
@@ -27,6 +34,22 @@ public class Blog {
     public Blog() {
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getSlug() {
         return slug;
     }
@@ -35,11 +58,11 @@ public class Blog {
         this.slug = slug;
     }
 
-    public Blob getContent() {
+    public String getContent() {
         return content;
     }
 
-    public void setContent(Blob content) {
+    public void setContent(String content) {
         this.content = content;
     }
 
@@ -65,5 +88,15 @@ public class Blog {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public BlogForListDto getBlogForList() {
+        return new BlogForListDto(
+                this.getTitle(),
+                this.getSlug(),
+                this.getImageUrl(),
+                this.getUser().getName(),
+                this.getTimestamp()
+        );
     }
 }

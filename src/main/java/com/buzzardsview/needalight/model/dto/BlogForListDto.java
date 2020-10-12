@@ -1,24 +1,19 @@
 package com.buzzardsview.needalight.model.dto;
 
-public class BlogGetDto {
+public class BlogForListDto {
 
     private String title;
     private String slug;
-    private String content;
     private String imageUrl;
-    private String Author;
+    private String author;
     private long timestamp;
 
-    public BlogGetDto(String title, String slug, String content, String imageUrl, String author, long timestamp) {
+    public BlogForListDto(String title, String slug, String imageUrl, String author, long timestamp) {
         this.title = title;
         this.slug = slug;
-        this.content = content;
         this.imageUrl = imageUrl;
-        Author = author;
+        this.author = author;
         this.timestamp = timestamp;
-    }
-
-    public BlogGetDto() {
     }
 
     public String getTitle() {
@@ -37,14 +32,6 @@ public class BlogGetDto {
         this.slug = slug;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public String getImageUrl() {
         return imageUrl;
     }
@@ -54,11 +41,11 @@ public class BlogGetDto {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        this.author = author;
     }
 
     public long getTimestamp() {
