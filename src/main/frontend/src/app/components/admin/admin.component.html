@@ -2,11 +2,21 @@
     <app-login-button></app-login-button>
 </div>
 
-<div class="newblogcontainer">
+<div *ngIf="!adminStatus">
+    <h1>Not Admin</h1>
+</div>
+
+<div class="newblogcontainer" *ngIf="adminStatus">
     <mat-card class="card">  
         <mat-card-content>
     
             <form [formGroup]="blogForm" class="form" (ngSubmit)="onSubmit(blogForm.value)">
+
+                <mat-form-field class="full-width">
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="ex. this-is-what-the-url-is" formControlName="title">
+                    <mat-error *ngIf="blogForm.get('title').invalid">{{getErrorMessage('title')}}</mat-error>
+                  </mat-form-field>
     
                 <mat-form-field class="full-width">
                   <mat-label>URL Slug</mat-label>
@@ -25,12 +35,14 @@
                     <span id="file-label">{{file.name}}</span>
                 </div>
     
-                <button mat-button (click)="onClick()">  
-                    <mat-icon>folder</mat-icon>  
-                    Select Image  
-                </button>  
-                <button [disabled]="blogForm.invalid" type="submit" class="submitbtn" mat-button>Send</button>
-            
+                <div class="buttonfooter">
+                    <button mat-button type="button" (click)="onSelectImage()">  
+                        <mat-icon>folder</mat-icon>  
+                        Select Image  
+                    </button>  
+                    <button [disabled]="blogForm.invalid" type="submit" class="submitbtn" mat-button>Post</button>
+                </div>
+                
             </form>
                       
         </mat-card-content> 

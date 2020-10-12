@@ -1,0 +1,19 @@
+<div *ngIf="blogs">
+    
+    <div class="headercontainer">
+        <h2 class="contentheader">Recent Blogs</h2>
+        <mat-divider></mat-divider>
+    </div>
+
+    <mat-card *ngFor="let blog of blogs" class="card">
+        <img routerLink="/blog/{{blog.slug}}" class="image clickable" [src]="blog.imageUrl" alt="">
+        <div class="titlecontainer">
+            <h2 routerLink="/blog/{{blog.slug}}" class="clickable">{{blog.title}}</h2>
+            <div class="footer">
+                <p>{{blog.author}}</p>
+                <p>{{getDateString(blog.timestamp)}}</p>
+            </div>
+        </div>
+    </mat-card>
+
+</div>

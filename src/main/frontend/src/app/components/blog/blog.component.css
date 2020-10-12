@@ -1,0 +1,30 @@
+.blogcontainer {
+    width: 700px;
+    max-width: 95%;
+    margin: 30px auto 30px auto;
+}
+
+.image {
+    width: 100%;
+}
+
+.authorcontainer {
+    display: flex;
+    align-items: flex-end;
+    margin: 20px 0 20px 0;
+    color: rgb(99, 99, 99);
+}
+
+.author {
+    line-height: 20px;
+    height: 20px;
+    margin-bottom: 0;
+}
+
+.timestamp {
+    color: rgb(99, 99, 99);
+}
+
+.title {
+    margin: 30px 0 20px 0;
+}

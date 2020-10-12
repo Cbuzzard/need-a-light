@@ -20,10 +20,25 @@ export class RestService {
   }
 
   uploadImage(image) {
-    console.log(image)
     return this.http.post(`${this.url.backend}/rest/upload`, image, {
       reportProgress: true,
       observe: 'events'
     })
   }
+
+  postBlog(blogPostDto) {
+    return this.http.post(`${this.url.backend}/rest/blog`, blogPostDto, {
+      reportProgress: true,
+      observe: 'events',
+    })
+  }
+
+  getBlog(slug) {
+    return this.http.get(`${this.url.backend}/rest/blog/${slug}`)
+  }
+
+  getBlogList() {
+    return this.http.get(`${this.url.backend}/rest/blog`)
+  }
+
 }
