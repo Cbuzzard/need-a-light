@@ -15,19 +15,19 @@
                 <mat-form-field class="full-width">
                     <mat-label>Title</mat-label>
                     <input matInput placeholder="ex. this-is-what-the-url-is" formControlName="title">
-                    <mat-error *ngIf="blogForm.get('title').invalid">{{getErrorMessage('title')}}</mat-error>
+                    <mat-error *ngIf="blogForm.get('title').invalid"></mat-error>
                   </mat-form-field>
     
                 <mat-form-field class="full-width">
                   <mat-label>URL Slug</mat-label>
                   <input matInput placeholder="ex. this-is-what-the-url-is" formControlName="slug">
-                  <mat-error *ngIf="blogForm.get('slug').invalid">{{getErrorMessage('slug')}}</mat-error>
+                  <mat-error *ngIf="blogForm.get('slug').invalid"></mat-error>
                 </mat-form-field>
               
                 <mat-form-field class="full-width">
                   <mat-label>Content</mat-label>
                   <textarea matInput placeholder="" formControlName="content"></textarea>
-                  <mat-error *ngIf="blogForm.get('content').invalid">{{getErrorMessage('content')}}</mat-error>
+                  <mat-error *ngIf="blogForm.get('content').invalid"></mat-error>
                 </mat-form-field>
     
                 <div *ngIf="file">

@@ -6,9 +6,9 @@
     </div>
 
     <mat-card *ngFor="let blog of blogs" class="card">
-        <img routerLink="/blog/{{blog.slug}}" class="image clickable" [src]="blog.imageUrl" alt="">
+        <img routerLink="/{{blog.slug}}" class="image clickable" [src]="blog.imageUrl" alt="">
         <div class="titlecontainer">
-            <h2 routerLink="/blog/{{blog.slug}}" class="clickable">{{blog.title}}</h2>
+            <h2 routerLink="/{{blog.slug}}" class="clickable">{{blog.title}}</h2>
             <div class="footer">
                 <p>{{blog.author}}</p>
                 <p>{{getDateString(blog.timestamp)}}</p>

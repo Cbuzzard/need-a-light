@@ -12,12 +12,12 @@ import { PricingComponent } from './components/pricing/pricing.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'blog/:slug', component: BlogComponent},
   { path: 'blog', component: BlogListComponent},
   { path: 'pricing', component: PricingComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'about', component: AboutComponent},
   { path: 'gallery', component: GalleryComponent},
+  { path: ':slug', component: BlogComponent},
 ];
 
 @NgModule({
