@@ -12,6 +12,7 @@ import {RestService} from '../../service/rest.service'
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
+  submitDisabled = false;
 
   constructor(private recaptchaV3Service: ReCaptchaV3Service, private formBuilder: FormBuilder, private rest: RestService, private _snackBar: MatSnackBar) {
     this.contactForm = this.formBuilder.group({
@@ -30,6 +31,7 @@ export class ContactComponent implements OnInit {
         body: form.body,
         recaptcha: token
       }
+      this.submitDisabled = true;
       this.rest.sendEmail(emailDto).subscribe((res: boolean) => {
         res ? this.onSuccess(formDir) : alert("error processing recaptcha");
       });
@@ -37,6 +39,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSuccess(formDir) {
+    this.submitDisabled = false;
     formDir.resetForm();
     this.contactForm.reset();
     this._snackBar.open("Email sent! We will get back to you shortly.", '', {duration: 5000})
