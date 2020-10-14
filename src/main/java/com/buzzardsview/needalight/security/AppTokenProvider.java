@@ -33,7 +33,9 @@ public class AppTokenProvider {
 
     public static Optional<String> getUserFromToken(HttpServletRequest request) {
         final String token = request.getHeader(HEADER_STRING);
-
+        if (token == null) {
+            return Optional.empty();
+        }
         if (token != null) {
             try {
                 Claims body = Jwts.parser()
