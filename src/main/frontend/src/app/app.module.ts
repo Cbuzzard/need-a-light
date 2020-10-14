@@ -82,7 +82,7 @@ import { SecurityContext } from '@angular/core';
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},
-    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcFJdQZAAAAACr-6R34kCTXuYysHG7WUYLOEi8P' }
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6Lcw5dYZAAAAAPPFxtb1jTqH-losxBvjbFQM05m9' }
   ],
   bootstrap: [AppComponent]
 })
