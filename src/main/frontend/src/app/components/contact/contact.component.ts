@@ -25,13 +25,13 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form, formDir) {
+    this.submitDisabled = true;
     this.recaptchaV3Service.execute('importantAction').subscribe((token) => {
       let emailDto = {
         email: form.email,
         body: form.body,
         recaptcha: token
       }
-      this.submitDisabled = true;
       this.rest.sendEmail(emailDto).subscribe((res: boolean) => {
         res ? this.onSuccess(formDir) : alert("error processing recaptcha");
       });

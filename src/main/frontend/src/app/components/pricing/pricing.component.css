@@ -67,4 +67,8 @@ p {
     .packagecontainer {
         flex: 80%;
     }
+
+    .priceheader {
+        background-attachment: scroll;
+    }
 }
